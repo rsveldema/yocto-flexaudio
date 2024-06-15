@@ -8,6 +8,9 @@ IMAGE_INSTALL:append = " raspi-gpio"
 IMAGE_INSTALL:append = " rpio"
 IMAGE_INSTALL:append = " rpi-gpio"
 IMAGE_INSTALL:append = " pi-blaster"
+IMAGE_INSTALL:append = " rauc"
+
+IMAGE_INSTALL:append = " flexaudio"
 
 IMAGE_INSTALL:append = " networkmanager"
 

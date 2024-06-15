@@ -293,3 +293,7 @@ INHERIT:remove = "uninative"
 
 LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
 
+DISTRO_FEATURES += "rauc"
+
+RPI_USE_U_BOOT = "1"
+ENABLE_UART = "1"
