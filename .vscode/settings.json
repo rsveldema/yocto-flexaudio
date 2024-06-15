@@ -15,6 +15,7 @@
         "${workspaceFolder}/poky/bitbake/lib",
         "${workspaceFolder}/poky/meta/lib"
     ],
-    "bitbake.pathToBitbakeFolder": "${workspaceFolder}/poky/bitbake",
-    "bitbake.sdkImage": "${workspaceFolder}/init.sh"
+    "bitbake.pathToBitbakeFolder": "${workspaceFolder}/sources/poky/bitbake",
+    "bitbake.sdkImage": "core-image-minimal",
+    "bitbake.pathToEnvScript": "${workspaceFolder}/init.sh"
 }

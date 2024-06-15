@@ -57,7 +57,7 @@ bitbake-layers add-layer sources/meta-flexaudio
 
 rm build/conf/local.conf
 
-ln -s $SRCDIR/sources/meta-flexaudio/conf/layer.conf build/conf/local.conf
+ln -s $SRCDIR/sources/meta-flexaudio/conf/templates/default/local.conf.sample build/conf/local.conf
 
 DL_DIR=$SRCDIR/downloads
 SSTATE_DIR="${HOME}/sstate"
