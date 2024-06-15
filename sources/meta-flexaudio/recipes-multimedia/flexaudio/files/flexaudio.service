@@ -1,0 +1,9 @@
+
+[Unit]
+Description=FlexAudio
+
+[Service]
+ExecStart=/usr/bin/flexaudio
+
+[Install]
+WantedBy=multi-user.target
