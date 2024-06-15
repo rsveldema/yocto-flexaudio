@@ -2,5 +2,19 @@
     "files.associations": {
         "*.conf": "bitbake",
         "*.inc": "bitbake"
-    }
+    },
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/sources/poky/bitbake/lib",
+        "${workspaceFolder}/sources/poky/meta/lib",
+        "${workspaceFolder}/poky/bitbake/lib",
+        "${workspaceFolder}/poky/meta/lib"
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/sources/poky/bitbake/lib",
+        "${workspaceFolder}/sources/poky/meta/lib",
+        "${workspaceFolder}/poky/bitbake/lib",
+        "${workspaceFolder}/poky/meta/lib"
+    ],
+    "bitbake.pathToBitbakeFolder": "${workspaceFolder}/poky/bitbake",
+    "bitbake.sdkImage": "${workspaceFolder}/init.sh"
 }

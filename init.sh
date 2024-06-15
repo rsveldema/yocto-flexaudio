@@ -47,3 +47,7 @@ unset OEROOT
 
 [ -z "$BUILDDIR" ] || cd "$BUILDDIR"
 
+
+bitbake-layers add-layer meta-openembedded/meta-oe/
+bitbake-layers add-layer meta-raspberrypi
+bitbake-layers add-layer meta-flexaudio
