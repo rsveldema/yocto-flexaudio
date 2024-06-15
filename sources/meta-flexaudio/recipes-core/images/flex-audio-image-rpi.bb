@@ -14,8 +14,6 @@ IMAGE_INSTALL:append = " pi-blaster"
 IMAGE_INSTALL:append = " networkmanager"
 
 
-INHERIT:remove = "uninative"
-
 inherit extrausers
 
 
