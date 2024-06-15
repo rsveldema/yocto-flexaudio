@@ -27,7 +27,8 @@ fi
 
 unset THIS_SCRIPT
 
-export OEROOT=`pwd`/poky
+export SRCDIR=`pwd`
+export OEROOT=$SRCDIR/sources/poky
 export BITBAKEDIR=$OEROOT/bitbake
 
 . "$OEROOT"/scripts/oe-buildenv-internal &&
@@ -37,8 +38,8 @@ export BITBAKEDIR=$OEROOT/bitbake
 }
 
 # Generate an initial configuration for VSCode and the yocto-bitbake plugin.
-if command -v code > /dev/null && [ ! -d "$OEROOT/.vscode" ]; then
-    oe-setup-vscode "$OEROOT" "$BUILDDIR"
+if command -v code > /dev/null && [ ! -d "$SRCDIR/.vscode" ]; then
+    oe-setup-vscode "$SRCDIR" "$BUILDDIR"
 fi
 
 echo $PATH
@@ -47,7 +48,8 @@ unset OEROOT
 
 [ -z "$BUILDDIR" ] || cd "$BUILDDIR"
 
+cd $SRCDIR
 
-bitbake-layers add-layer meta-openembedded/meta-oe/
-bitbake-layers add-layer meta-raspberrypi
-bitbake-layers add-layer meta-flexaudio
+bitbake-layers add-layer sources/meta-openembedded/meta-oe/
+bitbake-layers add-layer sources/meta-raspberrypi
+bitbake-layers add-layer sources/meta-flexaudio
