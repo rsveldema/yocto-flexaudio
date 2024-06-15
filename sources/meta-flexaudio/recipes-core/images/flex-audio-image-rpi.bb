@@ -13,3 +13,12 @@ IMAGE_INSTALL:append = " pi-blaster"
 
 IMAGE_INSTALL:append = " networkmanager"
 
+
+INHERIT:remove = "uninative"
+
+inherit extrausers
+
+
+EXTRA_USERS_PARAMS = " \
+    usermod -P root root \
+"

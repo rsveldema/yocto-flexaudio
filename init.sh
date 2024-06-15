@@ -15,6 +15,8 @@
 # prior to sourcing this script.
 #
 
+git submodule update --init --recursive
+
 if [ -n "$BBSERVER" ]; then
     unset BBSERVER
 fi
@@ -50,10 +52,11 @@ unset OEROOT
 
 cd $SRCDIR
 
-bitbake-layers add-layer sources/meta-openembedded/meta-oe/
 bitbake-layers add-layer sources/meta-raspberrypi
 bitbake-layers add-layer sources/meta-flexaudio
-
+bitbake-layers add-layer sources/meta-openembedded/meta-oe/
+bitbake-layers add-layer sources/meta-openembedded/meta-python/
+bitbake-layers add-layer sources/meta-openembedded/meta-networking
 
 rm build/conf/local.conf
 
