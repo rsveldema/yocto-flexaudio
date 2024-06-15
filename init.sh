@@ -53,3 +53,13 @@ cd $SRCDIR
 bitbake-layers add-layer sources/meta-openembedded/meta-oe/
 bitbake-layers add-layer sources/meta-raspberrypi
 bitbake-layers add-layer sources/meta-flexaudio
+
+
+rm build/conf/local.conf
+
+ln -s $SRCDIR/sources/meta-flexaudio/conf/layer.conf build/conf/local.conf
+
+DL_DIR=$SRCDIR/downloads
+SSTATE_DIR="${HOME}/sstate"
+
+
