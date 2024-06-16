@@ -3,7 +3,6 @@ include recipes-core/images/core-image-minimal.bb
 
 COMPATIBLE_MACHINE = "^rpi$"
 
-
 IMAGE_INSTALL:append = " bcm2835-tests"
 IMAGE_INSTALL:append = " raspi-gpio"
 IMAGE_INSTALL:append = " rpio"
@@ -20,6 +19,7 @@ IMAGE_INSTALL:append = " add-users"
 IMAGE_INSTALL:remove = "cdrtools"
 IMAGE_INSTALL:remove = "cdrkit"
 IMAGE_INSTALL:remove = "eudev"
+IMAGE_INSTALL:remove = "dnsmasq"
 
 IMAGE_INSTALL:append = " linux-firmware-rpidistro-bcm43455"
 IMAGE_INSTALL:append = " packagegroup-core-boot"

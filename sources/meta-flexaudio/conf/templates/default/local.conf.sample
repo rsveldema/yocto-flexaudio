@@ -92,7 +92,7 @@ MACHINE ??= "raspberrypi4-64"
 # Ultimately when creating custom policy, people will likely end up subclassing 
 # these defaults.
 #
-DISTRO ?= "poky"
+DISTRO ?= "poky-flexaudio"
 # As an example of a subclass there is a "bleeding" edge policy configuration
 # where many versions are set to the absolute latest code from the upstream 
 # source control systems. This is just mentioned here as an example, its not
@@ -289,8 +289,6 @@ PACKAGECONFIG:append:pn-qemu-system-native = " sdl"
 CONF_VERSION = "2"
 
 
-INHERIT:remove = "uninative"
-
 LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
 LICENSE_FLAGS_ACCEPTED:append = " commercial "
 
@@ -298,14 +296,14 @@ DISTRO_FEATURES += "rauc"
 DISTRO_FEATURES += "systemd"
 DISTRO_FEATURES += "usrmerge"
 
+
+INIT_MANAGER = "systemd"
 INHERIT += "extrausers"
 
-#MACHINE_FEATURES:append = "vc4graphics"
 RPI_KERNEL_DEVICETREE_OVERLAYS:append = " overlays/ads7846.dtbo "
 
 RPI_USE_U_BOOT = "1"
 ENABLE_UART = "1"
-
 
 
 EXTRA_USERS_PARAMS = " \
