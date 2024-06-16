@@ -3,6 +3,9 @@ include recipes-core/images/core-image-minimal.bb
 
 COMPATIBLE_MACHINE = "^rpi$"
 
+IMAGE_INSTALL:append = " u-boot-fw-utils"
+IMAGE_INSTALL:append = " raspi-dtb"
+
 IMAGE_INSTALL:append = " bcm2835-tests"
 IMAGE_INSTALL:append = " raspi-gpio"
 IMAGE_INSTALL:append = " rpio"
