@@ -294,10 +294,21 @@ INHERIT:remove = "uninative"
 LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
 LICENSE_FLAGS_ACCEPTED:append = " commercial "
 
-#DISTRO_FEATURES += "rauc"
+DISTRO_FEATURES += "rauc"
+DISTRO_FEATURES += "systemd"
+DISTRO_FEATURES += "usrmerge"
+
+INHERIT += "extrausers"
 
 #MACHINE_FEATURES:append = "vc4graphics"
 RPI_KERNEL_DEVICETREE_OVERLAYS:append = " overlays/ads7846.dtbo "
 
-RPI_USE_U_BOOT = "0"
-ENABLE_UART = "0"
+RPI_USE_U_BOOT = "1"
+ENABLE_UART = "1"
+
+
+
+EXTRA_USERS_PARAMS = " \
+    usermod -p '\$1\$SomVbW5V\$qNv7uAZOFr.ivxNehP3DE1' root; \
+"
+

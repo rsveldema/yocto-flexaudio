@@ -3,6 +3,7 @@ include recipes-core/images/core-image-minimal.bb
 
 COMPATIBLE_MACHINE = "^rpi$"
 
+
 IMAGE_INSTALL:append = " bcm2835-tests"
 IMAGE_INSTALL:append = " raspi-gpio"
 IMAGE_INSTALL:append = " rpio"
@@ -13,17 +14,14 @@ IMAGE_INSTALL:append = " rauc"
 IMAGE_INSTALL:append = " flexaudio"
 
 IMAGE_INSTALL:append = " networkmanager"
+#IMAGE_INSTALL:append = " set-root-password"
+IMAGE_INSTALL:append = " add-users"
 
 IMAGE_INSTALL:remove = "cdrtools"
 IMAGE_INSTALL:remove = "cdrkit"
+IMAGE_INSTALL:remove = "eudev"
 
 IMAGE_INSTALL:append = " linux-firmware-rpidistro-bcm43455"
 IMAGE_INSTALL:append = " packagegroup-core-boot"
 IMAGE_INSTALL:append = " packagegroup-core-ssh-openssh"
 IMAGE_INSTALL:append = " kernel-modules"
-
-inherit extrausers
-
-EXTRA_USERS_PARAMS = " \
-    usermod -p '\$1\$SomVbW5V\$qNv7uAZOFr.ivxNehP3DE1' root; \
-"
