@@ -23,3 +23,10 @@ SYSTEMD_SERVICE_${PN} = "flexaudio.service"
 
 inherit cmake pkgconfig systemd
 
+
+do_install:append() {
+  install -d ${D}/${systemd_unitdir}/system
+  install -m 0644 ${WORKDIR}/flexaudio.service ${D}/${systemd_unitdir}/system
+}
+
+FILES:${PN} += "${systemd_unitdir}/system/flexaudio.service"
