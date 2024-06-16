@@ -296,8 +296,6 @@ DISTRO_FEATURES += "rauc"
 DISTRO_FEATURES += "systemd"
 DISTRO_FEATURES += "usrmerge"
 
-
-INIT_MANAGER = "systemd"
 INHERIT += "extrausers"
 
 RPI_KERNEL_DEVICETREE_OVERLAYS:append = " overlays/ads7846.dtbo "
@@ -305,8 +303,8 @@ RPI_KERNEL_DEVICETREE_OVERLAYS:append = " overlays/ads7846.dtbo "
 RPI_USE_U_BOOT = "1"
 ENABLE_UART = "1"
 
-
 EXTRA_USERS_PARAMS = " \
     usermod -p '\$1\$SomVbW5V\$qNv7uAZOFr.ivxNehP3DE1' root; \
 "
 
+WKS_FILE = "sdimage-raspberrypi-flexaudio.wks"

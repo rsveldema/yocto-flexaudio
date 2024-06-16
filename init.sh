@@ -52,12 +52,12 @@ unset OEROOT
 
 cd $SRCDIR
 
+bitbake-layers add-layer sources/meta-flexaudio
 bitbake-layers add-layer sources/meta-raspberrypi
 bitbake-layers add-layer sources/meta-rauc
 bitbake-layers add-layer sources/meta-openembedded/meta-oe/
 bitbake-layers add-layer sources/meta-openembedded/meta-python/
 bitbake-layers add-layer sources/meta-openembedded/meta-networking
-bitbake-layers add-layer sources/meta-flexaudio
 
 rm build/conf/local.conf
 

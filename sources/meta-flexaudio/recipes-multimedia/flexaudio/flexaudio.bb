@@ -16,7 +16,6 @@ RDEPENDS:${PN} += "alsa-lib"
 RDEPENDS:${PN} += "alsa-tools"
 RDEPENDS:${PN} += "alsa-utils"
 
-
 S = "${WORKDIR}/git"
 
 SYSTEMD_AUTO_ENABLE = "enable"
