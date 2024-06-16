@@ -17,8 +17,12 @@ IMAGE_INSTALL:append = " networkmanager"
 IMAGE_INSTALL:remove = "cdrtools"
 IMAGE_INSTALL:remove = "cdrkit"
 
-inherit extrausers
+IMAGE_INSTALL:append = " linux-firmware-rpidistro-bcm43455"
+IMAGE_INSTALL:append = " packagegroup-core-boot"
+IMAGE_INSTALL:append = " packagegroup-core-ssh-openssh"
+IMAGE_INSTALL:append = " kernel-modules"
 
+inherit extrausers
 
 EXTRA_USERS_PARAMS = " \
     usermod -p '\$1\$SomVbW5V\$qNv7uAZOFr.ivxNehP3DE1' root; \
