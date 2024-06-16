@@ -3,7 +3,10 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 SRC_URI += " file://certs/development-1.key.pem"
 SRC_URI += " file://certs/development-1.cert.pem"
+SRC_URI += " file://fw_env.config"
 
 do_install:append() {
-    bbplain "appending!!!!!!!!!!!!!!!!!!"
+    install ${WORKDIR}/fw_env.config ${D}/etc
 }
+
+FILES:${PN} += "/etc/fw_env.config"
