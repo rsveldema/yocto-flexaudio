@@ -12,6 +12,7 @@ IMAGE_INSTALL:append = " rpio"
 IMAGE_INSTALL:append = " rpi-gpio"
 IMAGE_INSTALL:append = " pi-blaster"
 IMAGE_INSTALL:append = " rauc"
+IMAGE_INSTALL:append = " ethtool"
 
 IMAGE_INSTALL:append = " flexaudio"
 
