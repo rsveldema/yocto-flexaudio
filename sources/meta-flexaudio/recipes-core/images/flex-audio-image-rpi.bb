@@ -25,6 +25,9 @@ IMAGE_INSTALL:remove = "cdrkit"
 IMAGE_INSTALL:remove = "eudev"
 IMAGE_INSTALL:remove = "dnsmasq"
 
+IMAGE_INSTALL:append = " e2fsprogs"
+IMAGE_INSTALL:append = " util-linux"
+
 IMAGE_INSTALL:append = " linux-firmware-rpidistro-bcm43455"
 IMAGE_INSTALL:append = " packagegroup-core-boot"
 IMAGE_INSTALL:append = " packagegroup-core-ssh-openssh"
