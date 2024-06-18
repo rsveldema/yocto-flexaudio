@@ -7,3 +7,4 @@ RAUC_KEY_FILE = "${COREBASE}/../meta-flexaudio/recipes-core/rauc/files/certs/dev
 RAUC_CERT_FILE = "${COREBASE}/../meta-flexaudio/recipes-core/rauc/files/certs/development-1.cert.pem"
 RAUC_KEYRING_FILE = "${COREBASE}/../meta-flexaudio/recipes-core/rauc/files/ca.cert.pem"
 RAUC_BUNDLE_FORMAT = "verity"
+RAUC_BUNDLE_COMPATIBLE = "flexaudio"
