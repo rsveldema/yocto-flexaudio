@@ -11,10 +11,15 @@ IMAGE_INSTALL:append = " raspi-gpio"
 IMAGE_INSTALL:append = " rpio"
 IMAGE_INSTALL:append = " rpi-gpio"
 IMAGE_INSTALL:append = " pi-blaster"
-IMAGE_INSTALL:append = " rauc"
-IMAGE_INSTALL:append = " ethtool"
 
-IMAGE_INSTALL:append = " flexaudio"
+# fw update support:
+IMAGE_INSTALL:append = " rauc"
+
+# profiling and debugging:
+IMAGE_INSTALL:append = " ethtool"
+IMAGE_INSTALL:append = " gdb"
+IMAGE_INSTALL:append = " lttng-tools"
+IMAGE_INSTALL:append = " strace"
 
 IMAGE_INSTALL:append = " networkmanager"
 #IMAGE_INSTALL:append = " set-root-password"
@@ -32,3 +37,6 @@ IMAGE_INSTALL:append = " linux-firmware-rpidistro-bcm43455"
 IMAGE_INSTALL:append = " packagegroup-core-boot"
 IMAGE_INSTALL:append = " packagegroup-core-ssh-openssh"
 IMAGE_INSTALL:append = " kernel-modules"
+
+# The main event!
+IMAGE_INSTALL:append = " flexaudio"
